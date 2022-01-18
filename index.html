@@ -3,7 +3,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <body>
-
+<!-- Navigation -->
+  <nav class="w3-bar w3-black">
+    <a href="#home" class="w3-button w3-bar-item">Home</a>
+    <a href="#filme" class="w3-button w3-bar-item">Filme</a>
+    <a href="#serien" class="w3-button w3-bar-item">Serien</a>
+    <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+  </nav>
+<!-- Slide Show -->
+  <section>
+    <img class="mySlides" src="img_00.jpg" style="width:100%">
+    <img class="mySlides" src="img_01.jpg" style="width:100%">
+    <img class="mySlides" src="img_02.jpg" style="width:100%">
+  </section>
+// Automatic Slideshow - change IMG every 3 seconds
+var myIndex = 0;
+  carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++){
+                           x[i].style.display = "none";
+                           }
+myIndex++;
+if (MyIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+<section class="w3-container w3-center" style="max-width:600px">
+  <h2 class="w3-wide">privStream.io</h2>
+  <p class="w3-opacity"><i>We love Entertainment</i></p>
+  </section>
 <!-- Content will go here -->
 
 </body>
